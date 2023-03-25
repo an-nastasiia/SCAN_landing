@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="ru">
+
   <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,8 +11,10 @@
           {% block title %}Мониторинг СМИ и соцмедиа | СКАН-Интерфакс{% endblock %}
       </title>
   </head>
+
   <body>
     <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+
     <header>
       <br>
       <nav class="navbar navbar-expand-lg">
@@ -59,35 +62,44 @@
             <a class="navbar-brand" href="https://group.interfax.ru/">
               <img src="{% static 'img/fav/printlogo.png' %}" width="165">
             </a>
-            <div class="navbar-text" style="color:#009cab; font-size:11px"><b>ИНФОРМАЦИОННАЯ ГРУППА</b></div>
+            <div class="navbar-text fw-bold" style="color:#009cab; font-size:11px">ИНФОРМАЦИОННАЯ ГРУППА</div>
           </div>
         </div>
       </nav>
     </header>
+  
     <main>
       <div class="container p-5">
-        <div class="row">
-          <div class="col-4 d-flex align-items-center">
-            <h1><span style="color:#0aa3fa; text-decoration:underline">S</span>CAN — это</h1>
-          </div>
+        <div class="row d-flex align-items-center">
           <div class="col-8">
+            <h1 class="text-center fw-bold"><span style="color:#0aa3fa; text-decoration:underline">S</span>CAN — это</h1>
+            <br>
+            <br>
             <ul style="font-size:25px">
               <li>Автоматизация мониторинга, анализа СМИ и соцмедиа;</li>
+              <br>
               <li>Мощные лингвистические сервисы;</li>
+              <br>
               <li>Современное мобильное приложение;</li>
+              <br>
               <li>Внимательные менеджеры клиентской поддержки.</li>
+              <br>
+              <br>
+              <br>
             </ul>
           </div>
-        </div>
-        <row>
-          <div class="container p-5">
-              <h2 class="text-center"><span style="color:#0aa3fa; text-decoration:underline">S</span>CAN решит ваши задачи по управлению репутацией и рисками</h2>
-              <div class="row d-grid justify-content-center p-4">
-                <button class="btn btn-outline-info btn-lg" type="button">Попробовать СКАН</button>
-              </div>
-          </div>
-        </row>
-      </div>
+          <div class="col-4">
+            <img src="{% static 'img/sart_phone.png' %}" height="800">
+          </div>  <!-- col-8 -->
+        </div>  <!-- row -->
+      </div>  <!-- "container" -->
+
+      <div class="container bg-info-subtle p-5">
+        <h2 class="text-center"><span style="color:#0aa3fa; text-decoration:underline">S</span>CAN решит ваши задачи по управлению репутацией и рисками</h2>
+          <div class="row d-grid justify-content-center p-4">
+            <button class="btn btn-outline-info btn-lg" type="button">Попробовать СКАН</button>
+          </div> <!-- row -->
+      </div> <!-- "container" -->
       
       <div class="container p-5">
         <div class="row align-items-center">
@@ -106,14 +118,17 @@
                     <li>оперативные кризисные оповещения.</li>
                   </ul>
                   <br>
+
                   <div class="d-grid justify-content-center">
                     <a href="https://scan-interfax.ru/media-monitoring/" class="btn btn-outline-info btn-lg" role="button">Подробнее</a>
                   </div>
-                </div>
-            </div>
-          </div>
-        </div>
-      </div>
+
+                </div>  <!-- card-body -->
+            </div>  <!-- card -->
+          </div>  <!-- col -->
+        </div>  <!-- row -->
+      </div>  <!-- container -->
+
       <div class="container p-5">
         <div class="row align-items-center">
           <div class="col">
@@ -162,16 +177,59 @@
           </div>
         </div>
       </div>
-      <div class="container p-5">
+      <div class="container bg-info-subtle p-5">
         <div class="row d-grid justify-content-center p-4">
-          <button class="btn btn-outline-info btn-lg" type="button">Заказать тестовый доступ</button>
+          <button class="btn btn-info btn-lg" type="button">Заказать тестовый доступ</button>
         </div>
         <div class="d-grid justify-content-center">
           <p class="text-info">🖹<a href="https://scan-interfax.ru/wp-content/uploads/2020/12/forma-sravneniya-sistem.pdf" class="link-offset-3 link-info">Информация для закупок</a></p>
         </div>
       </div>
     </main>
-    <footer class="border-top text-center py-3">
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-3 p-5">
+              <a class="navbar-brand d-grid justify-content-center" href="https://scan-interfax.ru/">
+                <img src="{% static 'img/fav/logo.svg' %}" height="40">  
+              </a>
+          </div>  <!-- col -->
+          <div class="col-3 p-5">
+            <h4>Решения</h4>
+            <br>
+              <p><a class="nav-link link-dark" href="https://scan-interfax.ru/media-monitoring/">Мониторинг СМИ и коммуникация с журналистами</a></p>
+              <p><a class="nav-link link-dark" href="https://scan-interfax.ru/counterparty-verification/">Проверка контрагентов и установление деловой репутации</a></p>
+              <p><a class="nav-link link-dark" href="https://scan-interfax.ru/redactors-monitoring/">Редакторский мониторинг и аналитика СМИ и соцмедиа</a></p>
+          </div>  <!-- col-3 -->
+          <div class="col-3 p-5">
+            <h4><br></h4>
+            <br>
+            <p><a class="nav-link link-dark" href="https://scan-interfax.ru/training/">Обучение</a></p>
+            <p><a class="nav-link link-dark" href="https://scan-interfax.ru/ratings/">Рейтинги</a></p>
+            <p><a class="nav-link link-dark" href="https://scan-interfax.ru/blog/">Блог</a></p>
+          </div>
+          <div class="col-3 p-5">
+            <h4>Контакты</h4>
+            <br>
+            <p>1-я Тверская-Ямская ул.,2,</p>
+            <p>Москва, 127006</p>
+            <p>Телефон: <a href="tel:+74956483269" class="link-info">+7 (495) 648-32-69</a></p>
+            <p><a href="mailto:scan-sales@interfax.ru" class="link-info">scan-sales@interfax.ru<a></p>
+          </div>
+        </div> <!-- row -->
+        <div class="row">
+          <div class="col p-5">
+            <p class="lh-sm">© 2007-2023 Интерфакс</p>
+            <p class="lh-sm">Сетевое издание «Информационный ресурс СКАН».<br>
+            Зарегистрировано 26 июля 2019 года Федеральной службой по надзору в сфере связи, информационных технологий и массовых коммуникаций (Роскомнадзор) за номером ЭЛ № ФС 77 - 76379<br>
+            Учредитель: АО «Информационное агентство Интерфакс», главный редактор: Игорь Балдынов</p>
+            <p class="lh-sm">Настоящий ресурс может содержать материалы 16+<br>
+            Телефон редакции: 
+            <a href="tel:+74956483269" class="link-info">+7 (495) 648-32-69</a>, e-mail: <a href="mailto:scan-sales@interfax.ru" class="link-info">scan-sales@interfax.ru<a><br>
+            Политика конфиденциальности. Лицензия Роскомнадзора ЭЛ № ФС 77 - 76379. 16+.</p>
+          </div>
+        </div>
+      </div> <!-- container -->
     </footer>
   </body>
 </html>
