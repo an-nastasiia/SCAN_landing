@@ -1,0 +1,19 @@
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" name="{{ field.name }}" value="true" {% if field.value %}checked{% endif %} required>
+          {{ field.label }}
+          <a href="https://scan-interfax.ru/wp-content/uploads/2020/12/politika-konfidenczialnosti-interfaks-2020.pdf" target="_blank">Политикой</a>
+          {% if field.required %} <span class="required text-danger text-end">*</span>{% endif %}
+      </label>
+    </div>
+  
+    {% if field.errors %}
+      {% for error in field.errors %}
+        <span class="help-block">{{ error }}</span>
+      {% endfor %}
+    {% endif %}
+  
+    {% if field.help_text %}
+      <span class="help-block">{{ field.help_text|safe }}</span>
+    {% endif %}
+  

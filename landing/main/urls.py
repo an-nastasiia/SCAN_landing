@@ -1,4 +1,4 @@
-from django.urls import include, path
+from django.urls import path
 
 from . import views
 
@@ -11,5 +11,6 @@ urlpatterns = [
     # path('ratings/'),
     # path('blog/'),
     # path('wp-content/uploads/2020/12/forma-sravneniya-sistem.pdf'),
+    path('api/widget/addentitydata', views.ClientView.as_view(), name='api'),
     path('', views.main),
 ]

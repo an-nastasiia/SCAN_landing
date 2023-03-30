@@ -1,0 +1,57 @@
+{% load rest_framework %}
+
+<div class="modal fade" id="adModalToggle" tabindex="-1" aria-labelledby="adModalToggleLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="model-header d-grid justify-content-end p-3">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-4" id="adModalToggleLabel">
+        <p class="fs-3 fw-semibold text-center">Покажем, как работает <span style="color:#0aa3fa; text-decoration:underline">S</span>CAN — на примере ваших задач</p>
+          <br>
+          <br>
+          <br>
+        <p class="fs-3 text-center">Просто запишитесь на демо</p>
+      </div>
+      <div class="modal-footer justify-content-center">
+        <button type="close" class="btn btn-info" data-bs-target="#formModalToggle" data-bs-toggle="modal">Хочу просмотреть демо</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade" id="formModalToggle" tabindex="-1" aria-labelledby="formModalToggleLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header p-3">
+          <h1 class="modal-title" id="formModalToggleLabel">Попробовать <span style="color:#0aa3fa; text-decoration:underline">S</span>CAN</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form class="{% if field.errors %}has-error{% endif %}" action="{% url 'api' %}" method="POST">
+          <div class="modal-body">
+            {% for field in serializer %}
+              {% render_field field style=style %}
+            {% endfor %}
+          </div>
+          <div class="modal-footer justify-content-center">
+            <input type="submit" class="btn btn-info" data-bs-target="#formModalToggle2" value="Отправить"/>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="formModalToggle2" tabindex="-1" aria-labelledby="formModalToggleLabel2" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-body">
+            <p class="text-centered">Спасибо за вашу заявку!<br>
+              Мы свяжемся с вами с 10 до 19 в будний день.</p>
+          </div>
+          <div class="modal-footer justify-content-center">
+            <button type="close" class="btn btn-info" data-bs-toggle="modal">Хорошо</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>

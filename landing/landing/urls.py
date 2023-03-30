@@ -7,6 +7,5 @@ from django.urls import include, path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('group.interfax/'),
     path('', include('main.urls')),
 ]
