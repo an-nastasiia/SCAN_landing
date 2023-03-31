@@ -1,4 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.db import IntegrityError
+from rest_framework import exceptions, response
 from rest_framework.generics import CreateAPIView
 from rest_framework.renderers import TemplateHTMLRenderer
 from .serializers import ClientSerializer
@@ -15,6 +17,7 @@ class ClientView(CreateAPIView):
         serializer = ClientSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         serializer.save()
+
 
 
 def main(request):
